@@ -1,0 +1,4 @@
+You can use this Tutorial for free.
+packing using
+C:\'Program Files'\CMake\bin\cpack.exe -G ZIP -C Debug
+when using Windows and cpack was overwrited by Chocolatey.
