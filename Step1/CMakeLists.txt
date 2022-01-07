@@ -13,7 +13,6 @@ if(USE_MYMATH)
   # add the MathFunctions library
   add_subdirectory(MathFunctions)
   list(APPEND EXTRA_LIBS MathFunctions)
-  list(APPEND EXTRA_INCLUDES "${PROJECT_SOURCE_DIR}/MathFunctions")
 endif()
 
 # add the executable
@@ -30,5 +29,4 @@ target_link_libraries(Tutorial PUBLIC ${EXTRA_LIBS})
 # PROJECT_BINARY_DIR: Full path to build directory for project. This is the binary directory of the most recent project() command.
 target_include_directories(Tutorial PUBLIC
                            "${PROJECT_BINARY_DIR}"
-                           ${EXTRA_INCLUDES}
                            )
