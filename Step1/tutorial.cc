@@ -19,9 +19,9 @@ int main(int argc, char *argv[]) {
 		//const double inputValue = atof(argv[1]);
 		const double inputValue = std::stod(argv[1]);
 		#ifdef USE_MYMATH
-			std::cout << mysqrt(inputValue) << std::endl;
+			std::cout << inputValue << " is " << mysqrt(inputValue) << std::endl;
 		#else
-			std::cout << sqrt(inputValue) << std::endl;
+			std::cout << inputValue << " is " << sqrt(inputValue) << std::endl;
 		#endif
 	}
 	return 0;
