@@ -1,11 +1,11 @@
 #include <iostream>
 //#include <cstdlib>
-#include <cmath>
+//#include <cmath>
 #include <string>
 #include <TutorialConfig.h>
-#ifdef USE_MYMATH	// 要定义在TutorialConfig.h的下面，不然没有USE_MYMATH宏
-#  include "MathFunctions.h"
-#endif
+//#ifdef USE_MYMATH	// 要定义在TutorialConfig.h的下面，不然没有USE_MYMATH宏
+#include "MathFunctions.h"
+//#endif
 
 int main(int argc, char *argv[]) {
 	if (argc < 2) {
@@ -18,11 +18,11 @@ int main(int argc, char *argv[]) {
 	if (argc == 2) {
 		//const double inputValue = atof(argv[1]);
 		const double inputValue = std::stod(argv[1]);
-		#ifdef USE_MYMATH
-			std::cout << inputValue << " is " << mysqrt(inputValue) << std::endl;
-		#else
-			std::cout << inputValue << " is " << sqrt(inputValue) << std::endl;
-		#endif
+		//#ifdef USE_MYMATH
+			std::cout << inputValue << " is " << mathfunctions::sqrt(inputValue) << std::endl;
+		//#else
+			//std::cout << inputValue << " is " << sqrt(inputValue) << std::endl;
+		//#endif
 	}
 	return 0;
 }
